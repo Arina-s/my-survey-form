@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <main id="main">
+      <h1 id="title" >Опрос</h1>
+      <form id="survey-form"  action="index.html" method="post">
+        <p id="description">Как вы предпочитаете проводить свободное время?</p>
+        <div class="question">
+          <label id="name-label" for="name">* Имя:</label>
+        </div>
+        <div class="answer">
+          <input class="text-field" id="name" type="text" name="name" placeholder="Введите своё имя" required>
+        </div>
+        <div class="question">
+          <label id="email-label" for="email">* Email:</label>
+        </div>
+        <div class="answer">
+          <input class="text-field" id="email" type="email" name="email" placeholder="Введите свой Email" required>
+        </div>
+        <div class="question">
+        <label id="number-label" for="number">* Возраст:</label>
+        </div>
+        <div class="answer">
+        <input class="text-field" id="number" type="number" name="number" min="10" max="130" placeholder="Возраст" required>
+        </div>
+        <div class="question">
+        <label id="dropdown-label" for="dropdown">Какой у вас сейчас статус?</label>
+        </div>
+        <div class="answer">
+          <select id="dropdown" name="dropdown">
+            <option disabled>Выберете вариант</option>
+            <option value="student">Студент</option>
+            <option value="job">Работаю</option>
+            <option value="lox">Без работы и учёбы</option>
+            <option value="job-and-stydy">Учусь и работаю</option>
+            <option value="prefer-not-say">Предпочитаю не говорить</option>
+            <option value="other">Другое</option>
+          </select>
+        </div>
+        <div class="question">
+        Вы больше любите дома сидеть или выходить куда-то?
+        </div>
+        <div class="answer">
+        <ul>
+          <li>
+              <input id="home" type="radio" name="where" value="home">
+              <label class="label-radio" for="home">Дома</label>
+          </li>
+          <li>
+              <input id="out" type="radio" name="where" value="out">
+              <label class="label-radio" for="out">Выходить</label>
+          </li>
+          <li>
+              <input id="dontknow" type="radio" name="where" value="dontknow">
+              <label class="label-radio" for="out">Не знаю</label>
+          </li>
+        </ul>
+        </div>
+        <div class="question">
+        Что вы предпочитаете делать в свободное время?
+        </div>
+        <div class="answer">
+        <ul>
+          <li>
+            <input id="wolk" type="checkbox" name="checkbox" value="wolk">
+            <label for="wolk">Гулять</label>
+          </li>
+          <li>
+            <input id="film" type="checkbox" name="checkbox" value="film">
+            <label for="film">Смотреть фльмы/сериалы</label>
+          </li>
+          <li>
+            <input id="read" type="checkbox" name="checkbox" value="read">
+            <label for="read">Читать</label>
+          </li>
+          <li>
+            <input id="sport" type="checkbox" name="checkbox" value="sport">
+            <label for="sport">Заниматься спортом</label>
+          </li>
+          <li>
+            <input id="internet" type="checkbox" name="checkbox" value="internet">
+            <label for="internet">Бесцельно сидеть в интернете</label>
+          </li>
+          <li>
+            <input id="speak" type="checkbox" name="checkbox" value="speak">
+            <label for="speak">Общаться с друзьями/семьёй</label>
+          </li>
+          <li>
+            <input id="another" type="checkbox" name="checkbox" value="another">
+            <label for="another">Другое</label>
+          </li>
+        </ul>
+        </div>
+        <div class="question">
+        <label for="textarea">Дополнить:</label>
+        </div>
+        <div class="answer">
+        <textarea id="textarea" name="comment" rows="3" cols="40" placeholder="Напишите ваш комментарий здесь..."></textarea>
+        </div>
+        <br>
+        <input type="submit" name="submit" value="Отправить">
+      </form>
+    </main>
+  </body>
+</html>
